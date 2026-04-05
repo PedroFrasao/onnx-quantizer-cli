@@ -119,25 +119,25 @@ static int cmd_quantize(const std::string& input, const std::string& output) {
     return 0;
 }
 
-// ---------------------------------------------------------------------------
-// main
-// ---------------------------------------------------------------------------
+
+
+
 int main(int argc, char** argv) {
     CLI::App app{"ONNX Edge Optimizer — quantize and optimize ONNX models via terminal"};
     app.require_subcommand(1); 
 
-    // ── Subcommand: info ────────────────────────────────────────────────────
+    
     auto* info_cmd = app.add_subcommand("info", "Displays model inputs and outputs");
     std::string info_input;
     info_cmd->add_option("-i,--input", info_input, "Path to ONNX model")->required();
 
-    // ── Subcommand: optimize ────────────────────────────────────────────────
+    
     auto* opt_cmd = app.add_subcommand("optimize", "Applies graph optimizations (OnnxRuntime)");
     std::string opt_input, opt_output;
     opt_cmd->add_option("-i,--input",  opt_input,  "Input model")->required();
     opt_cmd->add_option("-o,--output", opt_output, "Output model")->required();
 
-    // ── Subcommand: quantize ────────────────────────────────────────────────
+    
     auto* quant_cmd = app.add_subcommand("quantize", "Quantizes weights FLOAT32 → INT8");
     std::string quant_input, quant_output;
     quant_cmd->add_option("-i,--input",  quant_input,  "Input model")->required();

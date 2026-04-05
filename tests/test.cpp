@@ -10,18 +10,18 @@
 
 
 int main() {
-    //  Criar o ambiente ONNX Runtime
+    
     Ort::Env env(ORT_LOGGING_LEVEL_WARNING, "onnx_workflow");
 
-    //  Configurar opções da sessão
+    
     Ort::SessionOptions session_options;
 
-    //  Caminhos dos modelos
+    
     std::string original_model = "C:/Users/pedro/Desktop/ONNX_OPTIMIZER/models/mobilenetv2-12-qdq.onnx";
     std::string optimized_model = "C:/Users/pedro/Desktop/ONNX_OPTIMIZER/models/model_optimized.onnx";
 
     try {
-        //  Otimizar o modelo e salvar
+        
         Ort::Session session = Optimizer(original_model, optimized_model, env, session_options); 
 
         std::cout << "Sessao pronta para inferencia com o modelo otimizado!" << std::endl;

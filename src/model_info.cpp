@@ -14,7 +14,7 @@ void ModelInfo(Ort::Session& session) {
 
     Ort::AllocatorWithDefaultOptions allocator;
 
-    // ===== LOOP DE INPUTS =====
+    
     for (size_t i = 0; i < input_model; ++i) {
         auto name = session.GetInputNameAllocated(i, allocator);
 
@@ -29,7 +29,7 @@ void ModelInfo(Ort::Session& session) {
         std::cout << std::endl;
     }
 
-    // ===== LOOP DE OUTPUTS =====
+    
     for (size_t i = 0; i < output_model; ++i) {
         auto name = session.GetOutputNameAllocated(i, allocator);
 
