@@ -2,7 +2,7 @@
 
 A command-line tool written in **C++20** for inspecting, optimizing, and quantizing ONNX models. Built on top of [ONNX Runtime](https://onnxruntime.ai/) and the [ONNX protobuf API](https://onnx.ai/), it operates directly at the graph level — allowing weight manipulation that a standard inference session cannot expose.
 
-> ⚠️ **Early-stage project.** This is the first phase of a larger planned toolchain. Expect breaking changes as new features are added.
+>  **Early-stage project.** This is the first phase of a larger planned toolchain. Expect breaking changes as new features are added.
 
 ---
 
@@ -212,12 +212,9 @@ ONNX_OPTIMIZER/
 
 ## Roadmap
 
-- [ ] Per-channel quantization
-- [ ] Activation quantization (dynamic and static)
-- [ ] Linux / macOS support
-- [ ] Extended operator coverage beyond Conv
-- [ ] Automated accuracy benchmarking after quantization
-- [ ] Unit test coverage
+This is the first phase of a larger planned toolchain.
+The project is expected to grow significantly in scope,
+performance, and operator coverage over time.
 
 ---
 
